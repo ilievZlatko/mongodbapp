@@ -1,0 +1,19 @@
+{
+  "name": "helloworldapp",
+  "version": "1.0.0",
+  "description": "A simple hello world app for practice",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "author": "Zlatko Iliev",
+  "license": "MIT",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "consolidate": "^0.14.5",
+    "express": "^4.16.2",
+    "mongodb": "^2.2.33",
+    "nodemon": "^1.12.1",
+    "nunjucks": "^3.0.1"
+  }
+}

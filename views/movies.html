@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            color: #363636;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+        }
+        a {
+            text-decoration: none;
+            color: #2164bf;
+            padding: 4px;
+        }
+
+        a:hover {
+            color: #363636;
+            background: #d9edf6;
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            display: inline-flex;
+            padding: 10px 20px;
+            border-radius: 3px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            margin-right: 10px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Movies</h1>
+    <ul>
+        {% for movie in movies %}
+        <li>
+            <a href="http://www.imdb.com/title/{{ movie.imdb }}">{{ movie.name }}, {{ movie.year }}</a>
+        </li>
+        {% else %}
+            <li>No movies found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
